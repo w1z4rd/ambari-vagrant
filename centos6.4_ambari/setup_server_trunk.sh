@@ -23,6 +23,7 @@ if [ "$vers" == "1.6.1" ]; then
 fi
 sudo yum clean all
 sudo yum install -y ambari-server
+sudo ambari-server setup --jdbc-db=mysql --jdbc-driver=/home/vagrant/mysql-connector-java-5.1.34-bin.jar
 sudo ambari-server setup -s
 sudo yum install unzip -y
 #TODO make this if from v2.1 forward!
